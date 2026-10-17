@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Club Meetings - Q8</title>
+  <style>
+    body { font-family: Arial; max-width: 900px; margin: 20px auto; padding: 10px; }
+    form { background: #f4f4f4; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+    input, textarea { width: 100%; padding: 8px; margin: 5px 0 10px; }
+    button { padding: 8px 15px; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #333; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Book Club Meeting Page (Q8)</h1>
+  <form id="meetingForm">
+    <input type="hidden" id="id">
+    <label>Meeting Title*</label><input type="text" id="meeting_title" required>
+    <label>Book Title*</label><input type="text" id="book_title" required>
+    <label>Meeting Date*</label><input type="date" id="meeting_date" required>
+    <label>Location</label><input type="text" id="location">
+    <label>Organizer</label><input type="text" id="organizer">
+    <label>Description</label><textarea id="description"></textarea>
+    <button type="submit">Save Meeting</button>
+    <button type="button" onclick="resetForm()">Cancel</button>
+  </form>
+
+  <table>
+    <thead><tr><th>ID</th><th>Meeting</th><th>Book</th><th>Date</th><th>Action</th></tr></thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
