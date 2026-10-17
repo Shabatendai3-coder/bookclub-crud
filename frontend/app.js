@@ -1,5 +1,4 @@
-const API = "http://localhost:3000/api/meetings";
-
+const API = "https://bookclub-crud-2.onrender.com/api/meetings";
 async function loadMeetings() {
   const res = await fetch(API);
   const data = await res.json();
